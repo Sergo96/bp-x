@@ -1,0 +1,65 @@
+{
+  "compilerOptions": {
+    "target": "es5",
+    "lib": ["dom", "dom.iterable", "esnext"],
+    "allowJs": true,
+    "skipLibCheck": true,
+    "strict": true,
+    "forceConsistentCasingInFileNames": true,
+    "noEmit": true,
+    "esModuleInterop": true,
+    "module": "esnext",
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "jsx": "preserve",
+    "incremental": true,
+    "baseUrl": ".",
+    "paths": {
+      "@my-core/*": ["./*"],
+      "@my-core": ["./index"],
+      "@vj-pages/*": ["./src/pages/*"],
+      "@vj-pages": ["./src/pages/index"],
+
+      "@vj-templates/*": ["./src/templates/*"],
+      "@vj-templates": ["./src/templates/index"],
+
+      "@vj-components/*": ["./src/components/*"],
+      "@vj-components": ["./src/components/index"],
+
+      "@vj-hooks/*": ["./src/hooks/*"],
+      "@vj-hooks": ["./src/hooks/index"],
+
+      "@vj-interfaces/*": ["./src/interfaces/*"],
+      "@vj-interfaces": ["./src/interfaces/index"],
+
+      "@vj-types/*": ["./src/types/*"],
+      "@vj-types": ["./src/types/index"],
+
+      "@vj-store/*": ["./src/store/*"],
+      "@vj-store": ["./src/store/index"],
+
+      "@vj-icons/*": ["./src/icons/*"],
+      "@vj-icons": ["./src/icons/index"],
+
+      "@vj-images/*": ["./src/images/*"],
+      "@vj-images": ["./src/images/index"],
+
+      "@vj-layouts/*": ["./src/layouts/*"],
+      "@vj-layouts": ["./src/layouts/index"],
+
+      "@vj-helpers/*": ["./src/helpers/*"],
+      "@vj-helpers": ["./src/helpers/index"],
+
+      "@vj-contexts/*": ["./src/contexts/*"],
+      "@vj-contexts": ["./src/contexts/index"],
+
+      "@vj-services/*": ["./src/services/*"],
+      "@vj-services": ["./src/services/index"],
+
+    }
+  },
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
+  "exclude": ["node_modules"]
+}
+

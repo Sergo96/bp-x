@@ -1,0 +1,24 @@
+@import "mixins/hover";
+@import "mixins/box-shadow";
+@import "mixins/transition";
+@import "mixins/border-radius";
+@import "mixins/fonts";
+@import "mixins/media";
+@import "mixins/zIndex";
+@import "mixins/circle";
+@import "mixins/noSelect";
+@import "mixins/inputHover";
+@import "mixins/padding";
+@import "mixins/margin";
+@import "mixins/scrollBar";
+@import "mixins/flex";
+
+
+@mixin width($depth:1) {
+  width: size($depth);
+}
+
+
+@mixin height($depth:1) {
+  height: size($depth);
+}

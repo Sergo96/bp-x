@@ -1,0 +1,9 @@
+// Single side border-radius
+@import "../sizes";
+
+
+@mixin border-radius($depth: 0.5) {
+    border-radius: $depth * $base-border-Radius;
+}
+
+

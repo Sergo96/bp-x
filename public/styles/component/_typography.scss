@@ -1,0 +1,125 @@
+@import "../variables";
+
+.typography {
+  font-family    : Montserrat, serif;
+  letter-spacing : 0.02px;
+  margin         : 0;
+  padding        : 0;
+  @include noSelect;
+
+  &-h1 {
+    @include fonts-h1;
+    @include mobile{
+      @include fonts-h1-mobile
+    }
+  }
+
+  &-h2 {
+    @include fonts-h2;
+    @include mobile{
+      @include fonts-h2-mobile
+    }
+  }
+
+  &-h3 {
+    @include fonts-h3;
+    @include mobile{
+      @include fonts-h3-mobile
+    }
+  }
+
+  &-h4 {
+    @include fonts-h4;
+    @include mobile{
+      @include fonts-h4-mobile
+    }
+  }
+
+  &-h5 {
+    @include fonts-h5
+  }
+
+  &-h6 {
+    @include fonts-h6
+  }
+
+  &-subtitle {
+    @include fonts-subtitle
+  }
+
+  &-body {
+    @include fonts-body
+  }
+
+  &-button {
+    @include fonts-button
+  }
+
+  &-macro1 {
+    @include fonts-macro1
+  }
+
+  &-macro2 {
+    @include fonts-macro2
+  }
+
+
+  position:       relative;
+
+
+  .tooltip-text {
+    visibility:       hidden;
+    width:            fit-content;
+    background-color: $background-dark;
+    color:            $text-light;
+    text-align:       center;
+    top:              60%;
+    left:             calc(100% + 10px);
+    position:         fixed;
+    z-index:          1;
+    opacity:          0;
+
+    @include fonts-macro2;
+    @include border-radius(0.5);
+    @include padding(.25, 2);
+
+
+  }
+
+  &:hover .tooltip-text {
+    visibility : visible;
+    opacity    : 1;
+  }
+
+  &.ovh {
+    text-overflow : ellipsis;
+    white-space   : nowrap;
+    overflow      : hidden;
+    width         : 100%;
+    @for $i from 2 through 100 {
+      &-#{$i} {
+        display: block;
+        display: -webkit-box;
+        -webkit-line-clamp: $i;
+        -webkit-box-orient: vertical;
+        white-space: normal;
+      }
+    }
+
+
+  }
+  &.left {
+    text-align: left;
+  }
+  &.right {
+    text-align: right;
+  }
+  &.center {
+    text-align: center;
+    width: 100%;
+  }
+  &.justify {
+    text-align: justify;
+  }
+}
+

@@ -1,0 +1,116 @@
+@import "../variables";
+
+$mobileIconSize: size(5);
+
+.how-to-easy {
+  height: 300px;
+  @include flex(flex-start, space-evenly);
+  gap: size(1);
+  @include mobile {
+    display: block;
+    height: unset;
+  }
+
+  .step-card {
+    width: 15vw;
+    max-width: 200px;
+    overflow: hidden;
+
+    .image-container {
+      position: relative;
+      border: 2px dashed $text-dark;
+      @include circle(15vw, 200px);
+
+      img {
+        @include circle(90%);
+        margin: 5%
+      }
+
+      .step-index {
+        @include circle(2vw, size(1.85), size(1.2));
+        background-color: $primary;
+        position: absolute;
+        top: 0.75vw;
+        right: 0.75vw;
+        text-align: center;
+        font-weight: $font-weight-semi-bold;
+        line-height: 2vw;
+        font-size: 1.4vw;
+        @include FHD {
+          top: size(.5);
+          right: size(.5);
+          line-height: size(1.85);
+          font-size: size(1.3);
+
+        }
+
+      }
+    }
+
+    .info {
+      @include flex(flex-start, center, column);
+      @include margin-top;
+
+      .title {
+        width: 100%;
+
+      }
+
+      .description {
+        width: 100%;
+
+
+      }
+    }
+
+    @include mobile {
+      width: 100%;
+      max-width: unset;
+      @include margin-bottom(1);
+      @include flex(center, space-between);
+      .image-container {
+        width: $mobileIconSize;
+        height: $mobileIconSize;
+
+        .step-index {
+          top: -2px;
+          right: -4px;
+          line-height: size(1.2);
+          font-size: size(0.8);
+        }
+      }
+      .info {
+        width: calc(100% - #{$mobileIconSize + size(1)});
+
+        .title, .title * {
+          text-align: left;
+        }
+
+        .description, .description * {
+          text-align: left;
+        }
+      }
+      &:nth-child(2n) {
+        @include flex(center, space-between, row-reverse);
+
+        .image-container .step-index {
+          left: -4px;
+          right: unset;
+        }
+
+        .info {
+          width: calc(100% - #{$mobileIconSize + size(1)});
+
+          .title, .title * {
+            text-align: right;
+          }
+
+          .description, .description * {
+            text-align: right;
+          }
+        }
+      }
+
+    }
+  }
+}

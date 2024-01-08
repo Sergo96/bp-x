@@ -1,0 +1,104 @@
+@import "../variables";
+
+header {
+  height           : $header-Height;
+  background-color : #{$background-dark}60;
+  position         : fixed;
+  top              : 0;
+  left             : 0;
+  width            : 100%;
+  backdrop-filter  : blur(size(.0625));
+
+  @include zIndex('high');
+  @include box-shadow-depth(1);
+
+  &, & * {
+    @include transition;
+  }
+
+  .container {
+    display         : flex;
+    align-items     : center;
+    justify-content : flex-end;
+    position        : relative;
+    height          : 100%;
+  }
+
+  &.scrolled {
+    height           : $header-small-Height;
+    background-color : $background;
+
+    .logo {
+      height : $header-logo-small-size;
+      width  : $header-logo-small-size;
+    }
+
+    .navbar {
+
+      .item {
+        color : $text-dark;
+      }
+    }
+  }
+
+  .navbar {
+    display     : flex;
+    align-items : center;
+    column-gap  : size(1.25);
+    width       : fit-content;
+
+    .item {
+      color : $text-light+50;
+
+      &.block {
+        background-color : $primary !important;
+        color            : $text-dark !important;
+        @include padding(1, 2.5);
+        @include fonts-button;
+        @include border-radius(1);
+        @include hover {
+          @include box-shadow-depth(1);
+        }
+      }
+
+      @include fonts-button;
+      @include hover-focus-active {
+        color : $primary;
+      }
+
+    }
+  }
+
+  .logo {
+    height   : $header-logo-size;
+    width    : $header-logo-size;
+    margin   : size(.3125);
+    position : absolute;
+    left     : 0;
+    top      : 0;
+  }
+
+  .burger {
+    cursor : pointer;
+  }
+
+  .mobile {
+    display : none;
+    width   : 35px;
+    height  : 35px;
+
+    .content {
+      max-height : 166px
+
+    }
+  }
+
+  @include mobile {
+    .mobile {
+      display : block;
+    }
+    .navbar {
+      display : none;
+    }
+  }
+}

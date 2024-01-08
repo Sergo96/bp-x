@@ -1,0 +1,44 @@
+@import "../variables";
+
+.table {
+  width: 100%;
+  border-spacing: 0;
+  background-color: $background;
+  color: $text-dark;
+  @include fonts-body;
+
+  tr {
+    :last-child {
+      td {
+        border-bottom: 0;
+      }
+    }
+  }
+
+  th,
+  td {
+    margin: 0;
+    border-bottom: 1px solid #f0f0f0;
+    @include padding(2);
+    @include transition;
+    :last-child {
+      border-right: 0;
+    }
+  }
+
+
+  .header {
+    background-color: $background;
+    position: relative;
+    font-weight: 500;
+    color: $text-dark;
+    border-bottom: 1px solid #f0f0f0;
+    text-align: left;
+    @include transition;
+    @include padding(2);
+    th {
+      font-weight: 500;
+      color: $text-dark;
+    }
+  }
+}

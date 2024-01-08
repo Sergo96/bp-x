@@ -1,0 +1,106 @@
+@import "../fonts";
+
+@mixin fonts-h1 {
+  font-weight: $font-weight-bold;
+  font-size:   $h1-font-size;
+  line-height: $line-height-h1;
+}
+
+@mixin fonts-h2 {
+  font-weight: $font-weight-semi-bold;
+  font-size:   $h2-font-size;
+  line-height: $line-height-h2;
+}
+
+@mixin fonts-h3 {
+  font-weight: $font-weight-semi-bold;
+  font-size:   $h3-font-size;
+  line-height: $line-height-h3;
+}
+
+@mixin fonts-h4 {
+  font-weight: $font-weight-normal;
+  font-size:   $h4-font-size;
+  line-height: $line-height-h4;
+}
+
+@mixin fonts-h5 {
+  font-weight: $font-weight-semi-bold;
+  font-size:   $h5-font-size;
+  line-height: $h5-font-size * $line-height-base;
+
+}
+
+@mixin fonts-h6 {
+  font-weight: $font-weight-semi-bold;
+  font-size:   $h6-font-size;
+  line-height: $h6-font-size * $line-height-base;
+
+}
+
+@mixin fonts-subtitle {
+  font-weight: $font-weight-semi-bold;
+  font-size:   $subtitle-font-size;
+  line-height: $subtitle-font-size * $line-height-base;
+
+}
+
+@mixin fonts-body {
+  font-weight: $font-weight-normal;
+  font-size:   $body-font-size;
+  line-height: $body-font-size * $line-height-base;
+
+}
+
+@mixin fonts-button {
+  font-weight: $font-weight-semi-bold;
+  font-size:   $button-font-size;
+  line-height: $button-font-size * $line-height-base;
+
+}
+
+@mixin fonts-macro1 {
+  font-weight: $font-weight-semi-bold;
+  font-size:   $macro1-font-size;
+  line-height: $macro1-font-size * $line-height-base;
+
+}
+
+@mixin fonts-macro2 {
+  font-weight: $font-weight-normal;
+  font-size:   $macro2-font-size;
+  line-height: $macro2-font-size * $line-height-base;
+}
+
+@mixin fonts-input {
+  font-size:   $input-font-size;
+  //line-height: $input-font-size * $line-height-base;
+
+}
+
+
+@mixin fonts-h1-mobile {
+  font-weight: $font-weight-bold;
+  font-size:   $h1-font-size-mobile;
+  line-height: 37px ;
+}
+
+@mixin fonts-h2-mobile {
+  font-weight: $font-weight-bold;
+  font-size:   $h2-font-size-mobile;
+  line-height: 22px;
+
+}
+
+@mixin fonts-h3-mobile {
+  font-weight: $font-weight-semi-bold;
+  font-size:   $h3-font-size-mobile;
+  line-height: 17px;
+
+}
+
+@mixin fonts-h4-mobile {
+  font-weight: $font-weight-bold;
+  font-size:   $h4-font-size-mobile;
+  line-height: 15px;
+}

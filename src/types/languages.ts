@@ -1,0 +1,1 @@
+export type tLanguages = 'en' | 'ru' | 'cs'

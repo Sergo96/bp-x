@@ -1,0 +1,9 @@
+@mixin zIndex($depth: 1) {
+  @if  $depth  == 'high' {
+    z-index: 1000;
+  } @else if($depth  == 'low') {
+    z-index: 1;
+  } @else {
+    z-index: 10 * $depth;
+  }
+}

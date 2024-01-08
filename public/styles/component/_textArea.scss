@@ -1,0 +1,75 @@
+@import "../variables";
+//
+//.textarea {
+//  margin           :           0;
+//  position         : relative;
+//  width            : 100%;
+//  color            : $text-dark;
+//  background-color : transparent;
+//  resize           : none;
+//  @include padding(1, 2);
+//  @include fonts-body;
+//  @include border-radius(1);
+//  @include transition;
+//  @include inputHover;
+//  @include scrollBarForBody;
+//
+//  &.dark {
+//    color            : $text-light;
+//    background-color : $background-dark;
+//
+//  }
+//
+//}
+
+.wrapper{
+  width: fit-content;
+  display: flex;
+  flex-direction: column;
+  .textarea {
+    margin           : 0;
+    position         : relative;
+    width            : 100%;
+    color            : $text-dark;
+    background-color : transparent;
+    resize           : none;
+    height           : fit-content;
+    overflow         : hidden;
+    white-space      : inherit;
+    min-height       : 100px;
+    @include scrollBar;
+    //overflow: hidden;
+    @include padding(1, 2);
+    @include inputFocus;
+    @include fonts-input;
+    &-scrolled{
+      overflow: auto;
+    }
+
+    &-active {
+      border : 1px solid $active-color;
+    }
+    &-disabled{
+      background: $disabled-color;
+      color: #ABA7AF;
+    }
+    &-resizedVertical {
+      resize : vertical;
+    }
+
+    &-resizedHorizontal {
+      resize : horizontal;
+    }
+
+    &.dark {
+      color            : $text-light;
+      background-color : $background-dark;
+    }
+
+  }
+  .error{
+    width: fit-content;
+    align-self: flex-end;
+    color:$error-color
+  }
+}

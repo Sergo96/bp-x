@@ -1,0 +1,28 @@
+@import "../variables";
+
+.my-toolTip {
+  position   : fixed;
+  @include zIndex(high);
+  @include padding;
+  @include border-radius(1);
+  @include box-shadow;
+  max-width  : 280px;
+  opacity    : 0;
+  visibility : hidden;
+
+  &.active {
+    opacity    : 1;
+    visibility : visible;
+  }
+
+  &_light-mode {
+    background-color : $background;
+    color            : $text-dark;
+  }
+
+  &_dark-mode {
+    color            : $text-light;
+    background-color : $background-dark;
+
+  }
+}

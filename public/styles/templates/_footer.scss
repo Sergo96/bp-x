@@ -1,0 +1,48 @@
+ @import "../variables";
+
+footer {
+  position:         fixed;
+  bottom:           -$footer-full-Height;
+  width:            100%;
+  height:           $footer-full-Height;
+  background-color: $background-dark;
+  display:          flex;
+  align-items:      center;
+  color:            $text-light;
+
+  @include zIndex('high');
+  @include fonts-macro2;
+
+  &.visible {
+    bottom: 0;
+  }
+
+  &, & * {
+
+    transition: all .5s;
+
+  }
+
+  .container {
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .terms-and-policy {
+    display:     flex;
+    align-items: center;
+    column-gap:  size();
+
+    a {
+      color: $text-light;
+      @include transition(all 0.2s ease-in-out);
+      @include hover {
+        color: $secondary;
+      }
+
+
+    }
+  }
+}

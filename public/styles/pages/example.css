@@ -1,0 +1,36 @@
+.example {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start; }
+  .example-page {
+    background: #ffffff; }
+  .example-item {
+    padding: 20px 100px;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+    border-bottom: 1px solid #FFE0D7;
+    gap: 8px;
+    min-height: 300px; }
+    .example-item.inLine {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      flex-direction: row; }
+      .example-item.inLine h1 {
+        width: 100%; }
+    .example-item .label {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: flex-start;
+      width: 100%; }
+    .example-item-typographies {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: flex-start; }
+
+/*# sourceMappingURL=example.css.map */

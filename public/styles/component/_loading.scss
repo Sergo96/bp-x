@@ -1,0 +1,47 @@
+@import "../variables";
+.loading {
+  width:100%;
+  position: relative;
+
+  &-wrapper {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background: #{$background-dark}47;
+    backdrop-filter: blur(size(.1875));
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: size(12.5);
+    top: 0;
+    left: 0;
+    @include zIndex('high');
+  }
+
+  &-icon {
+    -webkit-animation: spin 2s linear infinite; /* Safari */
+    animation: spin 2s linear infinite;
+    border-radius: 50%;
+    overflow: hidden;
+  }
+}
+
+
+/* Safari */
+@-webkit-keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

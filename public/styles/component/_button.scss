@@ -1,0 +1,57 @@
+@import "../variables";
+
+.btn {
+  cursor           : pointer;
+  display          : inline-block;
+  text-align       : center;
+  vertical-align   : middle;
+  background-color : $main-color;
+  color            : $text-color;
+  font-weight      : 600;
+  font-size        : size(1);
+  border           : 0;
+  font-family      : Montserrat, serif;
+  @include padding(1.5, 4.25);
+  @include noSelect;
+  @include transition(
+          color 0.15s ease-in-out,
+          background-color 0.15s ease-in-out,
+  );
+
+  &-hover {
+    @include hover {
+      background-color : $hover-color;
+      color            : $white;
+    }
+    @include active {
+      background-color : $active-color;
+      color            : $white;
+    }
+  }
+
+  &-adaptive {
+    width : 100%;
+  }
+
+  &-active {
+    background-color : $active-color;
+    color            : $white;
+  }
+
+  &-disabled {
+    background-color : $disabled-color;
+    color            : #B8B8B8;
+    cursor: not-allowed;
+  }
+
+  &-link {
+    color: $main-color;
+    background: none;
+    text-decoration:underline;
+    @include padding(0);
+    @include hover {
+      color            : $active-color;
+      background: none;
+    }
+  }
+}

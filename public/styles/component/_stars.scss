@@ -1,0 +1,23 @@
+@import "../variables";
+
+.stars {
+  @include flex(center, center);
+  column-gap : size(.25);
+  width: fit-content;
+  &.active {
+    .star {
+      cursor : pointer;
+      @include transition;
+
+      &:hover {
+        transform : scale(1.3);
+      }
+
+
+    }
+  }
+
+  .star {
+
+  }
+}

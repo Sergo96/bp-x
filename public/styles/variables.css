@@ -1,0 +1,12 @@
+:root {
+    /*colors*/
+    --mainColor:#FFE0D7;
+    --hoverColor:#FFC4B2;
+    --textColor:#282828;
+    --activeColor:#FF8760;
+    --starColor:#FFB800;
+    --defColor:#FFE0D7;
+     /*sizes*/
+    --button-padding:"12px 32px"
+
+}

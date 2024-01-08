@@ -1,0 +1,38 @@
+@import "../sizes";
+
+$base: $base-size / 2;
+
+@mixin margin($cord...) {
+  @if (length($cord) == 4) {
+    margin: nth($cord,1) * $base nth($cord,2) * $base nth($cord,3) * $base nth($cord,4) * $base;
+  } @else if (length($cord) == 3) {
+    @if(nth($cord,2) == auto){
+      margin: nth($cord,1) * $base auto nth($cord,3) * $base;
+    }
+    @else {
+      margin: nth($cord,1) * $base nth($cord,2) * $base nth($cord,3) * $base;
+    }
+  } @else if (length($cord) == 2) {
+    margin: nth($cord,1) * $base nth($cord,2) * $base;
+  } @else if (length($cord) == 1) {
+    margin: nth($cord,1) * $base;
+  } @else if (length($cord) == 0) {
+    margin: $base;
+  }
+}
+
+@mixin margin-left($depth:1) {
+  margin-left: $depth * $base;
+}
+
+@mixin margin-right($depth:1) {
+  margin-right: $depth * $base;
+}
+
+@mixin margin-top($depth:1) {
+  margin-top: $depth * $base;
+}
+
+@mixin margin-bottom($depth:1) {
+  margin-bottom: $depth * $base;
+}

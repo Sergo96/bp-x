@@ -1,0 +1,34 @@
+@import "variables/fonts-family";
+@import "reset";
+@import "layout";
+@import "container";
+@import "templates/slider";
+
+@import "component/toastify";
+@import "component/loading";
+@import "component/logo";
+@import "component/button";
+@import "component/typography";
+@import "component/stars";
+@import "component/select";
+@import "component/input";
+@import "component/textArea";
+@import "component/switch";
+@import "component/modal";
+@import "component/table";
+@import "component/user";
+@import "component/dropdownWrapper";
+@import "component/backgroungWrapper";
+@import "component/sidebar";
+@import "component/tooltip";
+@import "component/selectedLanguage";
+
+@import "templates/header";
+@import "templates/footer";
+@import "templates/contacts";
+@import "templates/map";
+@import "templates/banner";
+
+body{
+  background-color: var(--mainColor);
+}

@@ -1,0 +1,67 @@
+@import "../variables";
+
+
+.sidebar {
+  background: $sidebar-bgc;
+  height: 100%;
+  width: $sidebar-width;
+  padding-top: size(.3);
+  @include transition;
+
+  .item {
+    display: flex;
+    align-items: center;
+    position: relative;
+
+    width: 100%;
+    @include box-shadow;
+    @include padding(.5, 2);
+    @include margin-bottom(.5);
+
+    &, & > * {
+      @include transition;
+    }
+
+    svg {
+      @include flex;
+      @include border-radius(.5);
+      @include square(size(1.5));
+
+    }
+
+    &_title {
+      @include margin-left;
+    }
+
+    overflow: hidden;
+
+    &:before {
+      content: "";
+      position: absolute;
+      transform: rotate(25deg);
+      height: size(4);
+      width: size();
+      top: - size(.5);
+      left: - size(3);
+      background-color: $sidebar-item-bgc;
+      @include transition ;
+    }
+
+    @include hover-focus-active {
+
+      & > * {
+        font-size   : 18px;
+        line-height : 30px;
+      }
+      svg {
+        @include square(size(1.875));
+      }
+
+      box-shadow : 0 0 10px #11111175;
+    }
+
+    &.active:before {
+      left : calc(100% - #{size()})
+    }
+  }
+}

@@ -1,0 +1,97 @@
+@import "../variables";
+
+.user {
+  display: flex;
+  align-items: center;
+  height: 40px;
+  column-gap: 20px;
+
+
+  .notifications {
+    .content {
+      width: 280px;
+      &.opened{
+        height: 400px;
+      }
+    }
+    height: 30px;
+    width: 30px;
+
+    .children {
+      .count {
+        position: absolute;
+        top: 5px;
+        left: 15px;
+        width: fit-content;
+        @include fonts-macro1;
+        @include padding(0, .5);
+        @include border-radius(1);
+        line-height: 15px;
+        background-color: $error;
+        color: $text-light;
+        text-align: center;
+        @include box-shadow(0 0 3px 1px #fff)
+      }
+
+      svg {
+        &.hasCount {
+          transform: rotate(20deg);
+        }
+      }
+    }
+
+    .title {
+      width: 100%;
+      text-align: center;
+      color: $primary;
+    }
+
+    .block-options {
+      width: 100%;
+      @include fonts-macro2;
+
+      & > * {
+        width: fit-content;
+        @include padding(.25, 1);
+        @include border-radius(.25);
+        color: $text-dark;
+        cursor: pointer;
+        @include hover {
+          background-color: #{$background-dark}3c;;
+        }
+      }
+
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+  }
+
+  .avatar {
+    .content {
+      width: 280px;
+      max-height: 80px;
+      @include padding(1, 0);
+
+      .body {
+
+
+      }
+    }
+
+    .img {
+      overflow: hidden;
+      @include circle(40px);
+      @include box-shadow;
+
+      img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+
+  .content {
+    top: calc(100% + 10px)
+  }
+}

@@ -1,0 +1,73 @@
+
+
+$base-size:              16px;
+@function size($size:1) {
+  @return $size * $base-size;
+}
+
+/// screen
+
+$screen-xs-max:          size(48);//768
+$screen-sm-max:          size(64);//1024
+$screen-lg-max:          size(90);//1440
+$screen-xl-max:          size(120);//1920
+
+/// radius
+
+$base-border-Radius:     8px;
+
+/// z-index
+
+$lvl-1:                  1;
+$lvl-2:                  10;
+$lvl-4:                  100;
+$lvl-3:                  100;
+$lvl-high:               1000;
+
+/// header
+
+$header-Height:          size(3.75);
+$header-small-Height:    size(3.125);
+$header-logo-size:       size(3.125);
+$header-logo-small-size: size(2.5);
+
+
+/// footer
+
+$footer-full-Height:     size(3.125);
+$footer-small-Height:    size(3.125);
+
+/// contact-us
+
+
+$contact-us-right:       size(1.875);
+$contact-us-bottom:      size(5);
+$contact-us-width:       size(3.75);
+$contact-us-height:      size(3.75);
+$animate-block-bottom:   size(5);
+$animate-block-right:    size(31);
+$animate-block-height:   size(25);
+$animate-block-width:    size(18.75);
+
+/// input
+
+$input-iconW:            size(1.5);
+$input-columnGap:        size(.5);
+$input-height:           size(2.5);
+
+/// select
+$selector-height:        size(2.5);
+
+/// button
+$button-max-height:        size(2.75);
+
+/// switch
+$switch-width: 44px;
+$switch-height: 22px;
+$switch-border: 2px;
+
+/// sidebar
+$sidebar-width: size(18.75);
+$switch-height: 22px;
+$switch-border: 2px;
+

@@ -1,0 +1,31 @@
+@import "../variables";
+
+
+.home-page {
+  width    : 100%;
+  overflow : auto;
+  //padding: 100vh 0 0;
+  //position: relative;
+  .page {
+    @include padding(6, 0, 12);
+    background-color : $background;
+    position         : absolute;
+    left             : 0;
+    right            : 0;
+    @include zIndex(10);
+
+  }
+
+
+  .block-title {
+    width      : 100%;
+    @include margin(6, 0, 4);
+    height     : 50px;
+    text-align : center;
+  }
+
+
+}
+
+
+@import "../templates/aboutMini";

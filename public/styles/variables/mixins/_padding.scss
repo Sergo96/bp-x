@@ -1,0 +1,31 @@
+@import "../sizes";
+$base : $base-size - 4;
+
+@mixin padding($cord...) {
+  @if (length($cord) == 4) {
+    padding: nth($cord,1) * $base nth($cord,2) * $base nth($cord,3) * $base nth($cord,4) * $base;
+  } @else if (length($cord) == 3) {
+    padding: nth($cord,1) * $base nth($cord,2) * $base nth($cord,3) * $base;
+  } @else if (length($cord) == 2) {
+    padding: nth($cord,1) * $base nth($cord,2) * $base;
+  } @else if (length($cord) == 1) {
+    padding: nth($cord,1) * $base;
+  } @else if (length($cord) == 0) {
+    padding: $base;
+  }
+}
+@mixin padding-left($depth:1) {
+  padding-left: $depth * $base;
+}
+
+@mixin padding-right($depth:1) {
+  padding-right: $depth * $base;
+}
+
+@mixin padding-top($depth:1) {
+  padding-top: $depth * $base;
+}
+
+@mixin padding-bottom($depth:1) {
+  padding-bottom: $depth * $base;
+}

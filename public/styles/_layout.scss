@@ -1,0 +1,64 @@
+@import "variables";
+
+.cabinet-page {
+  width           : 100%;
+  height          : calc(100vh - #{ $footer-full-Height});
+  padding-top     : $header-small-Height;
+  display         : flex;
+  align-items     : center;
+  justify-content : space-between;
+
+  .cabinet-content {
+    width            : calc(100% - #{$sidebar-width});
+    height           : 100%;
+    background-color : #3333;
+  }
+
+  @include downToDesktop() {
+    .sidebar {
+      display : none;
+    }
+    .cabinet-content {
+      width : 100%
+    }
+  }
+}
+
+.layout {
+  &.un-authed {
+    width    : 100%;
+    height   : 100vh;
+    overflow : hidden;
+    position : fixed;
+    left     : 0;
+    top      : 0;
+    right    : 0;
+    bottom   : 0;
+
+    .un-authed-content {
+      width    : 100%;
+      height   : 100%;
+
+      //height         : calc(100% - #{ $footer-full-Height });
+      overflow : hidden auto;
+      position : relative;
+      @include transition;
+      @include scrollBarForBody;
+      &.scrolled {
+        height : calc(100% - #{ $header-small-Height + $footer-full-Height });
+        margin-top : $header-small-Height;
+
+      }
+
+      &.unAnimated {
+        height     : calc(100% - #{ $header-small-Height + $footer-full-Height });
+        margin-top : $header-small-Height;
+      }
+      //&.unScroll {
+      //  @include scrollBarForBody(0);
+      //  padding-right: 10px;
+      //}
+    }
+
+  }
+}

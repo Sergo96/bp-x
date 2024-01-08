@@ -1,0 +1,324 @@
+@import "../variables";
+
+
+$mobilePadding: size(1);
+.contact-us {
+  position:         fixed;
+  right:            $contact-us-right;
+  bottom:           $contact-us-bottom;
+  @include circle($contact-us-width);
+  background-color: $primary;
+  @include zIndex('high');
+  color:            $white;
+
+  &, & * {
+    @include transition;
+    @include noSelect;
+  }
+
+  &-icon {
+
+    display:         flex;
+    align-items:     center;
+    justify-content: center;
+    cursor:          pointer;
+    @include box-shadow-depth(1);
+    @include circle(100%);
+
+    @include hover {
+      @include box-shadow-depth(2);
+    }
+  }
+
+  .animate-block {
+    position         : fixed;
+    bottom           : 2*$animate-block-bottom;
+    right            : -$animate-block-right;
+    min-height       : $animate-block-height;
+    width            : 100%;
+    max-width        : $animate-block-width;
+    background-color : $background-dark;
+    opacity          : 0;
+    visibility       : hidden;
+
+    @include padding(4);
+    @include border-radius(1.25);
+    @include box-shadow-depth(1);
+
+
+    &.position-1 {
+      opacity    : 1;
+      visibility : visible;
+    }
+
+    &.position-0 {
+      right : $animate-block-right;
+    }
+
+    &.position-1 {
+      right : $contact-us-right;
+    }
+
+    &.position-2 {
+      right : -$animate-block-right;
+    }
+
+    .close-btn {
+      background : none;
+      position   : absolute;
+      right      : 0;
+      top        : 10px;
+
+      &:hover {
+        box-shadow : none;
+      }
+    }
+
+    .back-btn {
+      position:   absolute;
+      left:       10px;
+      top:        10px;
+      background: #4E4E4E;
+    }
+
+    @include mobile {
+      position: fixed;
+      width:    calc(100vw - #{2*$mobilePadding});
+      @include padding(4);
+      bottom: $contact-us-bottom;
+      &.content-base.position-1,
+      &.content-write.position-2 {
+        right: $mobilePadding;
+
+      }
+    }
+  }
+
+  .content-base{
+    &_btn {
+      width: 100%;
+    }
+
+    &_support {
+      font-size: size(0.8);
+
+      &_item {
+        display:       flex;
+        align-items:   center;
+        gap:           size(1);
+        margin-bottom: size(1.2);
+
+        .info {
+          display:        flex;
+          flex-direction: column;
+
+          &_text {
+            font-size: 14px;
+          }
+        }
+
+        .icon {
+          display     : flex;
+          align-items : center;
+
+          path {
+            fill : $white;
+          }
+        }
+      }
+
+    }
+
+    &_social {
+      width:          100%;
+      display:        flex;
+      flex-direction: column;
+      align-items:    center;
+
+      &_title {
+        margin-bottom: size(1);
+      }
+
+      &_icons {
+        width:           100%;
+        display:         flex;
+        justify-content: center;
+        padding-bottom:  size(1);
+        gap:             size(1);
+        border-bottom:   1px solid rgba(196, 196, 196, 0.2);
+        margin-bottom:   size(1.2);
+
+        .icon {
+          display : inline-block;
+
+          path {
+            fill : $white;
+          }
+        }
+      }
+    }
+  }
+
+  .content-write {
+    .form {
+      display        : flex;
+      flex-direction : column;
+      row-gap        : size(1);
+      margin-top     : size(2);
+
+      .textarea {
+        height : size(10);
+      }
+
+      .input {
+        box-shadow : none;
+      }
+    }
+  }
+
+
+  &.visible-block {
+    position         : inherit;
+    height           : size(18.75);
+    @include flex(center, space-between);
+    flex-wrap        : wrap;
+    background-color : unset;
+    @include border-radius(0);
+    width            : 100%;
+    gap              : size(2);
+
+    .animate-block {
+      position   : inherit;
+      max-width  : unset;
+      opacity    : 1;
+      visibility : visible;
+      width      : 50%;
+
+    }
+  }
+
+}
+
+.contact-page {
+  .container {
+    padding-top    : size(3);
+    padding-bottom : size(4);
+  }
+
+  .title {
+    margin-bottom : size(2);
+  }
+
+  .contact-form {
+    @include flex(center, space-between);
+    gap   : size(2);
+    width : 100%;
+
+    & > div {
+      flex-basis : 100%;
+    }
+
+    .content-write {
+      .form {
+        display        : flex;
+        flex-direction : column;
+        row-gap        : size(1);
+        margin-top     : size(2);
+
+        .textarea {
+          height : size(10);
+        }
+
+        .input {
+          box-shadow : none;
+        }
+      }
+    }
+
+    .content-base {
+
+
+      &_btn {
+        width : 100%;
+      }
+
+      &_support {
+        font-size : size(0.8);
+
+        &_item {
+          @include flex(center, flex-start);
+          gap           : size(1);
+          margin-bottom : size(1.2);
+
+          .info {
+            display        : flex;
+            flex-direction : column;
+
+            &_text {
+              font-size : 14px;
+            }
+          }
+
+          .icon {
+            display     : flex;
+            align-items : center;
+
+            path {
+              fill : $black;
+            }
+          }
+        }
+
+      }
+
+      &_social {
+        width          : 100%;
+        @include flex(flex-start,flex-start,column);
+
+        &_title {
+          margin-bottom : size(1);
+        }
+
+        &_icons {
+          display : flex;
+          width           : 100%;
+          padding-bottom  : size(1);
+          gap             : size(1);
+          border-bottom   : 1px solid rgba(196, 196, 196, 0.2);
+          margin-bottom   : size(1.2);
+
+          .icon {
+            display : inline-block;
+            circle{
+              stroke: $text-dark;
+            }
+            path {
+              fill : $black;
+            }
+          }
+        }
+      }
+    }
+    @include mobile {
+      flex-wrap: wrap;
+      & > div {
+        flex-basis : 100%;
+      }
+      .content-base{
+        > *{
+          align-items: center;
+        }
+        &_support{
+          @include flex(center,flex-start,column)
+        }
+        &_social{
+          @include flex(center,flex-start,column);
+          &_icons{
+            @include flex(center,center);
+          }
+        }
+      }
+    }
+  }
+}
+

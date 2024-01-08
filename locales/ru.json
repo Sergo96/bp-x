@@ -1,0 +1,23 @@
+{
+  "header": {
+    "nav": {
+      "about": "О нас",
+      "news": "Новости",
+      "login": "Войти",
+      "registration": "Регистрация",
+      "contactUs": "Контакты"
+    }
+  },
+  "footer": {
+    "terms": "Условия использования",
+    "policy": "Политика конфиденциальности"
+  },
+  "notification": {
+    "title": "Notifications"
+  },
+  "viewMore": "view more",
+  "viewAll": "view all",
+  "readMore": "read more",
+  "cabinet": "Cabinet"
+
+}

@@ -1,0 +1,22 @@
+{
+  "header": {
+    "nav": {
+      "about": "About Us",
+      "news": "News",
+      "login": "Sign in",
+      "registration": "Sign Up",
+      "contactUs": "Contacts"
+    }
+  },
+  "footer": {
+    "terms": "Terms of use",
+    "policy": "Privacy policy"
+  },
+  "notification": {
+    "title": "Notifications"
+  },
+  "viewMore": "view more",
+  "readMore": "read more",
+  "viewAll": "view all",
+  "cabinet": "Cabinet"
+}

@@ -1,0 +1,26 @@
+@import "../variables";
+
+.selectedLanguage {
+  align-items : center;
+  width       : size(2.5);
+  @include margin-left(2.5);
+  @include mobile() {
+    @include margin-right(2.5);
+  }
+
+  .content {
+    width : fit-content;
+  }
+
+  .children {
+    @include flex(center)
+  }
+
+  .flag-icon {
+    position : relative;
+  }
+
+  &_languageContent {
+    @include flex(center, center, column);
+  }
+}

@@ -1,0 +1,464 @@
+.about-page {
+    width: 100%;
+}
+
+.about-page .block-title {
+    width: 100%;
+    margin: 48px 0px 32px;
+    height: 50px;
+    text-align: center;
+}
+
+.about-page .about-block {
+    margin: 48px auto 40px;
+}
+
+.about-min {
+    width: 100%;
+    height: 400px;
+    gap: 16px 32px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.about-min .block {
+    width: calc(50% - 16px);
+    height: 100%;
+}
+
+.about-min_img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.about-min_description {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(10, minmax(40px, auto));
+}
+
+.about-min_description .description-title {
+    text-align: center;
+    width: 100%;
+    grid-column: 2/ -1;
+    grid-row: 1/2;
+}
+
+.about-min_description .description-body {
+    width: 100%;
+    align-self: center;
+    justify-self: stretch;
+    text-align: justify;
+    grid-column: 2/ -1;
+    grid-row: 2/10;
+}
+
+.about-min_description .description-action {
+    width: 100%;
+    grid-column: 2/ -1;
+    grid-row: 10/-1;
+}
+
+@media (max-width: 768px) {
+    .about-min {
+        height: unset;
+    }
+
+    .about-min .block {
+        height: 200px;
+        width: 100%;
+        min-width: unset;
+    }
+
+    .about-min .block.about-min_description {
+        height: unset;
+        grid-template-columns: unset;
+        grid-template-rows: unset;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+.how-to-easy {
+    height: 300px;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-evenly;
+    gap: 16px;
+}
+
+@media (max-width: 768px) {
+    .how-to-easy {
+        display: block;
+        height: unset;
+    }
+}
+
+.how-to-easy .step-card {
+    width: 15vw;
+    max-width: 200px;
+    overflow: hidden;
+}
+
+.how-to-easy .step-card .image-container {
+    position: relative;
+    border: 2px dashed #111111;
+    border-radius: 50%;
+    width: 15vw;
+    height: 15vw;
+    max-width: 200px;
+    max-height: 200px;
+}
+
+.how-to-easy .step-card .image-container img {
+    border-radius: 50%;
+    width: 90%;
+    height: 90%;
+    margin: 5%;
+}
+
+.how-to-easy .step-card .image-container .step-index {
+    border-radius: 50%;
+    width: 2vw;
+    height: 2vw;
+    max-width: 29.6px;
+    max-height: 29.6px;
+    min-width: 19.2px;
+    min-height: 19.2px;
+    background-color: #04AA6D;
+    position: absolute;
+    top: 0.75vw;
+    right: 0.75vw;
+    text-align: center;
+    font-weight: 600;
+    line-height: 2vw;
+    font-size: 1.4vw;
+}
+
+@media (min-width: 1440px) and (max-width: 1920px) {
+    .how-to-easy .step-card .image-container .step-index {
+        top: 8px;
+        right: 8px;
+        line-height: 29.6px;
+        font-size: 20.8px;
+    }
+}
+
+.how-to-easy .step-card .info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    margin-top: 8px;
+}
+
+.how-to-easy .step-card .info .title {
+    width: 100%;
+}
+
+.how-to-easy .step-card .info .description {
+    width: 100%;
+}
+
+@media (max-width: 768px) {
+    .how-to-easy .step-card {
+        width: 100%;
+        max-width: unset;
+        margin-bottom: 8px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .how-to-easy .step-card .image-container {
+        width: 80px;
+        height: 80px;
+    }
+
+    .how-to-easy .step-card .image-container .step-index {
+        top: -2px;
+        right: -4px;
+        line-height: 19.2px;
+        font-size: 12.8px;
+    }
+
+    .how-to-easy .step-card .info {
+        width: calc(100% - 96px);
+    }
+
+    .how-to-easy .step-card .info .title, .how-to-easy .step-card .info .title * {
+        text-align: left;
+    }
+
+    .how-to-easy .step-card .info .description, .how-to-easy .step-card .info .description * {
+        text-align: left;
+    }
+
+    .how-to-easy .step-card:nth-child(2n) {
+        display: flex;
+        flex-direction: row-reverse;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .how-to-easy .step-card:nth-child(2n) .image-container .step-index {
+        left: -4px;
+        right: unset;
+    }
+
+    .how-to-easy .step-card:nth-child(2n) .info {
+        width: calc(100% - 96px);
+    }
+
+    .how-to-easy .step-card:nth-child(2n) .info .title, .how-to-easy .step-card:nth-child(2n) .info .title * {
+        text-align: right;
+    }
+
+    .how-to-easy .step-card:nth-child(2n) .info .description, .how-to-easy .step-card:nth-child(2n) .info .description * {
+        text-align: right;
+    }
+}
+
+.already-with-our {
+    height: 120px;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: center;
+    column-gap: 16px;
+}
+
+@media (max-width: 768px) {
+    .already-with-our {
+        display: block;
+        width: fit-content;
+        max-width: 100%;
+    }
+}
+
+.already-with-our .partners-cards {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-evenly;
+    column-gap: 16px;
+}
+
+.already-with-our .partners-cards .partners-card {
+    width: 130px;
+    height: 100px;
+    display: inline-block;
+    column-gap: 16px;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-evenly;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+}
+
+.already-with-our .partners-cards .partners-card img {
+    object-fit: cover;
+    object-position: center;
+    width: 100%;
+    height: 100%;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    -moz-box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+    -webkit-box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+    border-radius: 8px;
+}
+
+.already-with-our .partners-cards .partners-card:hover img {
+    transform: scale(1.5);
+}
+
+@media (max-width: 768px) {
+    .already-with-our .partners-cards {
+        display: block;
+        width: 100%;
+        white-space: nowrap;
+        overflow: auto;
+        padding-bottom: 8px;
+    }
+
+    .already-with-our .partners-cards::-webkit-scrollbar {
+        width: 2px;
+        height: 2px;
+        border-radius: 10px;
+        -webkit-transition: all 0.3s ease-in-out;
+        -moz-transition: all 0.3s ease-in-out;
+        -o-transition: all 0.3s ease-in-out;
+        transition: all 0.3s ease-in-out;
+    }
+
+    .already-with-our .partners-cards::-webkit-scrollbar-track {
+        box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+        -webkit-transition: all 0.3s ease-in-out;
+        -moz-transition: all 0.3s ease-in-out;
+        -o-transition: all 0.3s ease-in-out;
+        transition: all 0.3s ease-in-out;
+    }
+
+    .already-with-our .partners-cards::-webkit-scrollbar-thumb {
+        background-color: darkgrey;
+        outline: 1px solid slategrey;
+        border-radius: 10px;
+        -webkit-transition: all 0.3s ease-in-out;
+        -moz-transition: all 0.3s ease-in-out;
+        -o-transition: all 0.3s ease-in-out;
+        transition: all 0.3s ease-in-out;
+    }
+
+    .already-with-our .partners-cards:hover::-webkit-scrollbar-thumb {
+        outline: 2px solid slategrey;
+        background-color: #04AA6D;
+    }
+
+    .already-with-our .partners-cards:hover::-webkit-scrollbar {
+        width: 4px;
+        height: 4px;
+    }
+
+    .already-with-our .partners-cards .partners-card {
+        display: inline-block;
+        margin-left: 16px;
+    }
+
+    .already-with-our .partners-cards .partners-card:first-child {
+        margin-left: 0px;
+    }
+
+    .already-with-our .partners-cards .partners-card img {
+        box-shadow: none;
+        transform: none !important;
+    }
+}
+
+.already-with-our .view-more {
+    width: 130px;
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.already-with-our .view-more .text {
+    opacity: 0;
+    visibility: hidden;
+    height: 0;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+}
+
+.already-with-our .view-more .arrow {
+    width: 32px;
+    height: 32px;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+}
+
+@media (min-width: 768px) {
+    .already-with-our .view-more:hover .arrow {
+        width: 64px;
+        height: 64px;
+    }
+}
+
+.already-with-our .view-more:hover .text {
+    opacity: 1;
+    visibility: visible;
+    height: 24px;
+}
+
+@media (max-width: 768px) {
+    .already-with-our .view-more {
+        width: 120px;
+        height: 40px;
+        margin: 8px auto 24px;
+        background-color: #04AA6D;
+        border-radius: 4px;
+        display: flex;
+        flex-direction: row-reverse;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .already-with-our .view-more .text {
+        opacity: 1;
+        visibility: visible;
+        height: 24px;
+    }
+
+    .already-with-our .view-more .arrow {
+        display: none;
+    }
+}
+
+.users-opinion {
+    max-width: 767px;
+}
+
+.users-opinion .opinion-card {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    column-gap: 16px;
+    margin-top: 8px;
+}
+
+.users-opinion .opinion-card .avatar {
+    width: 64px;
+    height: 64px;
+}
+
+.users-opinion .opinion-card .info {
+    width: calc(100% - 80px);
+    height: 64px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+.users-opinion .ctrl {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+    column-gap: 16px;
+    margin-top: 16px;
+}
+
+.users-opinion .ctrl .read-more {
+    width: fit-content;
+    height: 34px;
+    background-color: #04AA6D;
+    cursor: pointer;
+    padding: 4px 20px;
+    border-radius: 8px;
+}
+
+/*# sourceMappingURL=about.css.map */

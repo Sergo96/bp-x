@@ -1,0 +1,42 @@
+@import "../variables";
+
+$mobileIconSize : size(5);
+
+.users-opinion {
+  max-width : $screen-xs-max - 1px;
+
+  .opinion-card {
+    width      : 100%;
+    @include flex(center, space-between);
+    column-gap : size(1);
+
+    .avatar {
+      @include square(size(4))
+    }
+
+    .info {
+      width  : calc(100% - #{size(5)});
+      height : size(4);
+      @include flex(flex-start, space-between, column)
+    }
+
+    @include margin-top;
+  }
+
+  .ctrl {
+    width      : 100%;
+    @include flex(center, flex-end);
+    column-gap : size();
+    @include margin-top(2);
+
+    .read-more {
+      width            : fit-content;
+      height           : 34px;
+      background-color : $primary;
+      cursor : pointer;
+      @include padding(.5,2.5);
+      @include border-radius(1)
+    }
+  }
+
+}

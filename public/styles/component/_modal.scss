@@ -1,0 +1,80 @@
+@import "../variables";
+
+.modal {
+  background: #{$background-dark}35;
+
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  overflow: hidden;
+  overscroll-behavior: contain;
+  outline: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  backdrop-filter: none;
+  width: 0;
+  height: 0;
+  opacity: 0;
+  visibility: hidden;
+  @include zIndex('high');
+  @include transition;
+
+  &.visible {
+    backdrop-filter: blur(1px);
+    width: 100vw;
+    height: 100vh;
+    opacity: 1;
+    visibility: visible;
+    top: 0;
+    left: 0;
+  }
+
+  &-content {
+    flex: 1;
+    align-content: flex-start;
+    overflow: auto;
+    max-height: size(37.5);
+    @include padding(3);
+    @include scrollBar;
+
+  }
+
+
+
+  &-body {
+    width:fit-content;
+    height: fit-content;
+    background: $background;
+    max-width: size(50);
+    min-width: size(16);
+    max-height: 80vh;
+     display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    @include zIndex('high');
+    @include border-radius(2);
+
+    .title {
+      @include padding(2, 3);
+      display: flex;
+      justify-content: space-between;
+      cursor: pointer;
+
+      .icon {
+        display: flex;
+        align-items: center;
+      }
+    }
+  }
+
+  .footer {
+    width: 100%;
+    @include padding(2, 3);
+    display: flex;
+    justify-content: flex-end;
+    border-top: #7c7e7b;
+    gap: size(0.625);
+  }
+}
+

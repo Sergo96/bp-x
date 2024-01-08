@@ -1,0 +1,92 @@
+@import "../variables";
+.dropdownWrapper{
+  position: relative;
+  cursor: pointer;
+
+  .children{
+
+  }
+  .content{
+    top: calc(100% + 10px);
+    //&.left{
+    //  left: 0;
+    //}
+    //&.right{
+    //  right: 0;
+    //}
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    row-gap: 5px;
+    visibility: hidden;
+    opacity: 0;
+    position: absolute;
+    overflow: hidden;
+    height: 0;
+    width: size(12.5);
+    max-height: calc(100vh - #{size(4)});
+    background-color: $background;
+    @include zIndex(2);
+    @include box-shadow;
+    @include border-radius(1);
+    @include padding(1, .5, 1, 1);
+
+    &.opened {
+      visibility: visible;
+      opacity: 1;
+      height: 300px;
+    }
+
+    .title {
+      width: 100%;
+      height: fit-content;
+      @include padding(0, .25, 0, 0);
+    }
+    .body{
+
+      overflow: hidden auto;
+      width: 100%;
+      height: 100%;
+      @include scrollBar;
+      @include padding(0, .25, 0, 0);
+
+      &.list {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        @include padding(0);
+        .item {
+          width: 100%;
+          height: 30px;
+          line-height: 30px !important;
+          @include padding(0, 2);
+          @include upToMobile {
+            @include hover {
+              background-color: #{$background-dark}3c;
+            }
+
+            &.logout {
+              @include hover {
+                color: $error;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .options {
+      width: 100%;
+      height: fit-content;
+      @include padding(0, .25, 0, 0);
+    }
+  }
+
+  @include mobile {
+    .content {
+      max-width: 280px !important;
+
+    }
+  }
+}

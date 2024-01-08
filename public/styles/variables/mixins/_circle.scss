@@ -1,0 +1,18 @@
+@import "../sizes";
+@mixin square($size: size(3.125),$max:0,$min:0) {
+  width:           $size;
+  height:          $size;
+  @if( $max != 0 ){
+    max-width:           $max;
+    max-height:          $max;
+  }
+  @if( $min != 0 ){
+    min-width:           $min;
+    min-height:          $min;
+  }
+}
+
+@mixin circle($size: size(3.125),$max:0,$min:0) {
+  border-radius:   50%;
+  @include square($size,$max,$min)
+}

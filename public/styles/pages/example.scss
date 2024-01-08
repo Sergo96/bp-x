@@ -1,0 +1,30 @@
+@import "../variables";
+.example{
+  @include flex(flex-start,flex-start,column);
+
+  &-page{
+    background: $white;
+  }
+  &-item{
+    padding: 20px 100px;
+    @include flex(flex-start,flex-start,row);
+    border-bottom: 1px solid $main-color;
+    gap: size(0.5);
+    min-height: 300px;
+
+    &.inLine{
+      h1{width: 100%}
+      display : flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      flex-direction: row;
+    }
+    .label{
+      @include flex(flex-start,flex-start,column);
+      width: 100%;
+    }
+    &-typographies{
+      @include flex(flex-start,flex-start,column);
+    }
+  }
+}

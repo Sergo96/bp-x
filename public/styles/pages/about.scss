@@ -1,0 +1,28 @@
+@import "../variables";
+
+
+.about-page{
+  width: 100%;
+
+
+
+
+  .block-title{
+    width: 100%;
+    @include margin( 6,0,4);
+    height: 50px;
+    text-align: center;
+  }
+
+  .about-block {
+    @include margin(6, auto, 5);
+  }
+
+
+}
+
+
+@import "../templates/aboutMini";
+@import "../templates/howToEase";
+@import "../templates/alreadyWithOur";
+@import "../templates/usersOpinion";

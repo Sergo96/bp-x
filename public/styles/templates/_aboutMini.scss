@@ -1,0 +1,70 @@
+@import "../variables";
+
+.about-min {
+  width: 100%;
+  height: size(25);
+  gap: size(1) size(2);
+  @include flex( center,   space-between);
+  flex-wrap: wrap;
+
+  .block {
+    width: calc(50% - #{size(1)});
+    height: 100%;
+  }
+
+  &_img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+
+
+  &_description {
+
+
+    display: grid;
+    grid-template-columns: 1fr ;
+    grid-template-rows: repeat(10, minmax(size(2.5), auto));
+    .description-title{
+
+      text-align: center;
+      width: 100%;
+      grid-column: 2/ -1;
+      grid-row: 1/2;
+    }
+    .description-body{
+
+
+      width: 100%;
+      align-self: center;
+      justify-self: stretch;
+      text-align: justify;
+      grid-column: 2/ -1;
+      grid-row: 2/10;
+    }
+    .description-action{
+
+      width: 100%;
+      grid-column: 2/ -1;
+      grid-row: 10/-1;
+    }
+
+  }
+
+  @include mobile {
+    height: unset;
+    .block {
+      height: 200px;
+      width: 100%;
+      min-width: unset;
+      &.about-min_description{
+        height: unset;
+
+        grid-template-columns: unset ;
+        grid-template-rows: unset;
+        @include flex(center,center,column)
+      }
+    }
+  }
+}

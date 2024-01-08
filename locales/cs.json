@@ -1,0 +1,25 @@
+{
+  "header": {
+    "nav": {
+      "about": "O nás",
+      "news": "Zprávy",
+      "login": "Přihlásit se",
+      "registration": "Registrace",
+      "contactUs": "Kontakty"
+    }
+  },
+  "footer": {
+    "terms": "Podmínky použití",
+    "policy": "Zásady ochrany osobních údajů"
+  },
+  "notification": {
+    "title": "Notifications"
+  },
+  "viewMore": "view more",
+  "readMore": "read more",
+  "viewAll": "view all",
+  "cabinet": "Cabinet"
+
+}
+
+

@@ -1,0 +1,23 @@
+@import "../colors";
+
+@mixin inputHover() {
+  border : 1px solid #{$input-border-color};
+
+  &:hover {
+    border-color : $input-border-color;
+  }
+
+  &:focus {
+    border-color       : $active-color;
+    border-right-width : 1px !important;
+    outline            : 0;
+    box-shadow         : 0 0 0 2px #{$active-border}33;
+  }
+}
+
+@mixin inputFocus() {
+
+  &:focus {
+    border-color       : $active-color;
+  }
+}

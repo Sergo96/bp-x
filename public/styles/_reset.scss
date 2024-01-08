@@ -1,0 +1,18 @@
+@import "./variables";
+
+a, button {
+  cursor : pointer;
+  color  : inherit;
+}
+
+* {
+  margin         : 0;
+  padding        : 0;
+  outline        : none;
+  box-sizing     : border-box;
+  text-decoration: none;
+}
+body {
+  overflow : hidden;
+  @include transition;
+}
